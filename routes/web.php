@@ -24,7 +24,7 @@ Route::get('/contact', function () {
 
 Route::get('/mon_espace', function () {
     return view('dashboard_client');
-})->name('dashboard_client');
+})->middleware(['auth', 'verified'])->name('dashboard_client');
 
 Route::get('/mes_pieces', function () {
     return view('pieces');
