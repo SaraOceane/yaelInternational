@@ -46,7 +46,7 @@ Route::get('/dashboard', function () {
 
 Route::get('/traitement_formes_juridiques', 'FormesJuridiquesController@traiterFormulaire')->name('traitement_formes_juridiques');
 Route::get('/formes_juridiques', function(){
-    return View('formes_juridiques');
+    return View('fo rmes_juridiques');
 });
 
 Route::get('/traitement_formulaire', 'FormulaireController@traiterFormulaire')->name('traitement_formulaire');
