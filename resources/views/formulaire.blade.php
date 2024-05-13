@@ -146,10 +146,16 @@
             <input type="text" class="form-control" id="valeur_apport">
         </div>
 
-        <h4> Activités / Date de début d'activité</h4>
+        <h4> Activités </h4>
 
         <div class="form-field">
             <input type="text" class="form-control" id="activite">
+        </div>
+
+        <h4> Date de début d'activité</h4>
+
+        <div class="form-field">
+            <input type="date" class="form-control" id="date_debut_activite">
         </div>
 
         <button type="submit" class="btn btn-primary" onclick="redirectToNextPage()">Suivant</button>

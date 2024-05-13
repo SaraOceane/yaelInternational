@@ -6,7 +6,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
             margin: 0;
             padding-top: 80px;
             padding-bottom: 80px;
@@ -105,8 +104,12 @@
 
             <div class="form-field">
                 <div>
-                    <label for="loyer">Loyer mensuel/durée du bail</label>
+                    <label for="loyer">Loyer mensuel</label>
                     <input type="text" class="form-control" id="loyer">
+                </div>
+                <div>
+                    <label for="loyer">Durée du bail</label>
+                    <input type="text" class="form-control" id="duree_bail">
                 </div>
                 <div>
                     <label for="lot">Lot/Ilot/Section/Parcelle</label>
