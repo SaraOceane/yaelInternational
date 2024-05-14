@@ -14,11 +14,20 @@ return new class extends Migration
         Schema::create('entreprise', function (Blueprint $table) {
             $table->id();
             $table->string('nom_entreprise');
-            $table->string('secteurs_activite')->nullable();
-            $table->string('sigle usuel')->nullable();
+            $table->string('forme_juridique');
+            $table->string('secteurs_activite');
+            $table->string('sigle_usuel')->nullable();
             $table->string('enseigne')->nullable();
-            $table->string('capital', 10, 2)->nullable();
+            $table->string('capital');
             $table->string('valeur_nominale', 10, 2)->nullable();
+            $table->date('date_debut_activite');
+            $table->string('loyer_mensuel');
+            $table->string('lot');
+            $table->string('situation_geographique');
+            $table->string('numero_titre_foncier');
+            $table->string('contact_adresse_postale');
+            $table->string('chiffre_affaire_previsionnel');
+            $table->string('regime_imposition');
             $table->timestamps();
         });
     }

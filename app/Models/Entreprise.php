@@ -24,4 +24,24 @@ class Entreprise extends Model
     public function associe(){
         return $this->belongsToMany(Associe::class);
     }
+
+    protected $fillable = [
+        'nom_entreprise',
+        'forme_juridique',
+        'secteurs_activite',
+        'sigle_usuel',
+        'enseigne',
+        'capital',
+        'valeur_nominale',
+        'date_debut_activite',
+        'loyer_mensuel',
+        'lot',
+        'situation_geographique',
+        'numero_titre_foncier',
+        'contact_adresse_postale',
+        'chiffre_affaire_previsionnel',
+        'regime_imposition',
+          
+    ];
 }
+
