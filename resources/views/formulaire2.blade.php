@@ -96,13 +96,13 @@
             top: 6px;
         }
     </style>
-</head>
 <body>
     <div class="form-container">
 
         
 
             <div class="form-field">
+            
                 <div>
                     <label for="loyer">Loyer mensuel</label>
                     <input type="text" class="form-control" id="loyer">

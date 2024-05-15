@@ -73,7 +73,7 @@
     </style>
     
 <body>
-    <div class="form-container container">
+    <div class="form-container container section">
         <h2 class="form-title">PROCEDURE DE CREATION D'ENTREPRISE</h2>
         <h3 class="form-subtitle">INFORMATIONS REQUISES</h3>
 
