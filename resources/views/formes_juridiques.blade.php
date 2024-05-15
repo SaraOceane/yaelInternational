@@ -127,7 +127,12 @@
 <body>
     <div class="container">
 
-        
+        @if (session('status'))
+        <div class="alert alert-success">
+            {{ session('status') }}
+        </div>
+            
+        @endif
 
             <div class="section active">
                 <h1>Ce qu'il faut savoir</h1>
