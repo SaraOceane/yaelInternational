@@ -59,7 +59,7 @@ Route::get('/formulaire2', function(){
     return View('formulaire2');
 });
 
-Route::post('/traitement_formulaire', [EntrpriseController::class, 'strore']);
+Route::post('/traitement_formulaire', [EntrepriseController::class, 'store']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
