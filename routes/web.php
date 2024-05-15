@@ -49,7 +49,7 @@ Route::get('/formes_juridiques', function(){
     return View('formes_juridiques');
 });
 
-Route::get('/traitement_formulaire', 'FormulaireController@traiterFormulaire')->name('traitement_formulaire');
+
 Route::get('/formulaire', function(){
     return View('formulaire');
 });
@@ -58,6 +58,8 @@ Route::get('/traitement_formulaire2', 'Formulaire2Controller@traiterFormulaire')
 Route::get('/formulaire2', function(){
     return View('formulaire2');
 });
+
+Route::post('/traitement_formulaire', [EntrpriseController::class, 'strore']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

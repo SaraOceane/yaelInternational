@@ -23,7 +23,7 @@
             font-size: 24px;
             text-decoration: underline;
             margin-bottom: 20px;
-            color: #1e3a8a; /* Bleu foncé pour les titres */
+            color: #020202; /* Bleu foncé pour les titres */
             white-space: nowrap; /* Empêche le titre de se diviser sur plusieurs lignes */
         }
         .form-subtitle {
@@ -185,7 +185,7 @@
                 <button class="btn btn-primary btn-next">Valider</button>
             </div>
 
-            <div class="form-container container section">
+            <div class="form-container section">
                 <h2 class="form-title">PROCEDURE DE CREATION D'ENTREPRISE</h2>
                 <h3 class="form-subtitle">INFORMATIONS REQUISES</h3>
         
