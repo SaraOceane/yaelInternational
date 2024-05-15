@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('nom');
             $table->string('emplacement');
             $table->timestamps();
+            $table->foreignId('associes_id')->constrained()->onDelete('cascade');
         });
     }
 
