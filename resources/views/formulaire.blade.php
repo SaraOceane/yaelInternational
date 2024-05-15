@@ -10,7 +10,7 @@
             padding-bottom: 50px;
         }
         .form-container {
-            width: 600px; 
+            width: 600px;
             padding: 20px;
             border: 1px solid #ced4da;
             border-radius: 10px;
@@ -48,11 +48,11 @@
             padding: 8px; /* Espacement interne des champs de saisie */
             overflow-wrap: break-word;
         }
-        
+
         .btn-primary {
             display: block;
             margin: ;
-            
+
             font-weight: lighter;
             color: #fff;
             padding: 10px 12px;
@@ -69,9 +69,9 @@
             box-shadow: 0 0 #efa424;
             top: 6px;
         }
-        
+
     </style>
-    
+
 <body>
     <div class="form-container container">
         <h2 class="form-title">PROCEDURE DE CREATION D'ENTREPRISE</h2>
@@ -85,6 +85,7 @@
 
         <h4> Sigle usuel et enseigne</h4>
 
+        <form action="" method="post">
         <div class="form-field">
             <div>
                 <label for="sigle_usuel">Sigle usuel</label>
@@ -99,28 +100,29 @@
             <h4> Associés</h4>
 
             <div class="form-field">
-                
+
                 <label for="associes">Combien d'associés avez vous ?</label>
                 <input type="number" id="nb_associes" name="nb_associes" min="1" max="10" />
 
-                
+
             </div>
-            
-        
+
+
 
             <div class="form-field">
-                
+
                 <label for="associes">Nom et prénoms, date et lieu de naissance, lieu de résidence et numéro</label>
-                
+
             </div>
 
             <div class="form-field">
                     <input type="textarea" class="form-control" id="ville" style="width: 100%;">
             </div>
-                
-        
-            
+
+
+
         </div>
+
 
         <h4> Capital social, valeur nominale et nombre de parts: (en FCFA)</h4>
 
@@ -159,8 +161,9 @@
         </div>
 
         <button type="submit" class="btn btn-primary" onclick="redirectToNextPage()">Suivant</button>
+    </form>
     </div>
-    
+
     <script>
 
     document.addEventListener("DOMContentLoaded", function() {
