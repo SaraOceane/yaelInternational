@@ -11,9 +11,9 @@
             padding-bottom: 80px;
         }
         .form-container {
-            width: 600px; 
+            width: 600px;
             padding: 20px;
-           
+
             border: 1px solid #ced4da;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -38,7 +38,7 @@
             margin-bottom: 20px;
         }
         .form-field label {
-            
+
         }
         .form-field input {
             flex: 1;
@@ -99,7 +99,7 @@
 <body>
     <div class="form-container">
 
-        
+
 
             <div class="form-field">
             
@@ -119,7 +119,7 @@
 
             <div class="form-field">
                 <label  for="ville">Ville/Commune/Rue/Quartier/Immeuble ou villa</label>
-                
+
             </div>
 
             <div class="form-field">
@@ -138,7 +138,7 @@
             </div>
 
 
-        
+
 
             <div class="form-field">
                 <div>
@@ -151,7 +151,7 @@
                 </div>
             </div>
 
-        
+
 
         <h4> Date d'embauche du premier employé</h4>
 
@@ -159,7 +159,7 @@
             <input type="date" class="form-control" id="date">
         </div>
 
-        <h4> Gérant(s): nom et prénoms; date et lieu de naissance; résidence; type 
+        <h4> Gérant(s): nom et prénoms; date et lieu de naissance; résidence; type
         de pièces; n° de pièce; Email; n° tel :</h4>
 
         <div class="form-field">
@@ -197,12 +197,16 @@
             <button type="button" class="btn btn-primary">Soumettre</button>
         </div>
     </div>
-    
+
     <script>
         function redirectToPreviousPage() {
             window.location.href = "formulaire";
         }
     </script>
+
+    
+
+    <form action="" method="post"></form>
 </body>
 @include('include.footer')
 

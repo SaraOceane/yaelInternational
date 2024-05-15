@@ -46,7 +46,7 @@ class EntrepriseController extends Controller
             'chiffre_affaire_previsionnel' => 'required',
             'regime_imposition' => 'required',
         ]);
-        
+
         $entreprise = new Entreprise();
         $entreprise->nom_entreprise = $request->nom_entreprise;
         $entreprise->forme_juridique = $request->forme_juridique;
@@ -67,7 +67,7 @@ class EntrepriseController extends Controller
 
         return redirect('/mon_espace')->with('status', 'Le formulaire a bien été enregistré avec succes.');
     }
-    
+
 
     /**
      * Display the specified resource.
