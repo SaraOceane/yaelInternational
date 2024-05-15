@@ -29,7 +29,9 @@ class EntrepriseController extends Controller
      */
     public function store( $request)
     {
-        $request->validate();
+        $request->validate([
+            
+        ]);
         //
     }
 
