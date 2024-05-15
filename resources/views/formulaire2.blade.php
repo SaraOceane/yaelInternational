@@ -206,7 +206,7 @@
 
     
 
-    <form action="" method="post"></form>
+    
 </body>
 @include('include.footer')
 

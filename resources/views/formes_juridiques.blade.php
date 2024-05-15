@@ -134,6 +134,8 @@
             
         @endif
 
+        <form action="/traitement_formulaire" method="post">
+
             <div class="section active">
                 <h1>Ce qu'il faut savoir</h1>
                 <p>Il y a deux types de formes juridiques: les EI(Entreprises Individuelles) et les SARL(Sociétés A Responsabilité Limitée).</p>
@@ -376,9 +378,10 @@
 
                 <div class="buttons-container">
                     
-                    <button class="btn btn-primary btn-next final">Suivant</button>
+                    <button type="submit" class="btn btn-primary btn-next final">Suivant</button>
                 </div>
             </div>
+        </form>
         
 
     </div>
