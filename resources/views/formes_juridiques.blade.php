@@ -196,10 +196,18 @@
                 <h2 class="form-title">PROCEDURE DE CREATION D'ENTREPRISE</h2>
                 <h3 class="form-subtitle">INFORMATIONS REQUISES</h3>
         
+        
                 <h4> Dénomination et forme juridique</h4>
         
                 <div class="form-field">
-                    <input type="text" class="form-control" id="denomination"> </textarea>
+                    <div>
+                        <label for="denomination">Dénomination</label>
+                        <input type="text" class="form-control" id="denomination">
+                    </div>
+                    <div>
+                        <label for="forme_juridique">Forme_juridique</label>
+                        <input type="text" class="form-control" id="forme_juridique">
+                    </div>
                 </div>
         
                 <h4> Sigle usuel et enseigne</h4>
@@ -226,18 +234,49 @@
                     </div>
                     
                 
-        
                     <div class="form-field">
                         
-                        <label for="associes">Nom et prénoms, date et lieu de naissance, lieu de résidence et numéro</label>
+                        <label for="nom">Nom </label>
+                        <input type="text" class="form-control" id="nom" style="width: 100%;">
+                        
+                    </div>
+
+                    <div class="form-field">
+                        
+                        <label for="prenoms">Prénoms </label>
+                        <input type="text" class="form-control" id="prenom" style="width: 100%;">
+                        
+                    </div>
+
+                    <div class="form-field">
+                        
+                        <label for="date_de_naissance">Date de naissance </label>
+                        <input type="date" class="form-control" id="date_de_naissance" style="width: 100%;">
+                        
+                    </div>
+
+                    <div class="form-field">
+                        
+                        <label for="lieu_de_naissance">Lieu de naissance </label>
+                        <input type="text" class="form-control" id="lieu_de_naissance" style="width: 100%;">
+                        
+                    </div>
+
+                    <div class="form-field">
+                        
+                        <label for="lieu_de_residence">Lieu de résidence </label>
+                        <input type="text" class="form-control" id="lieu_de_residence" style="width: 100%;">
+                        
+                    </div>
+
+                    <div class="form-field">
+                        
+                        <label for="numero">Numéro </label>
+                        <input type="text" class="form-control" id="numero" style="width: 100%;">
                         
                     </div>
         
-                    <div class="form-field">
-                            <input type="textarea" class="form-control" id="ville" style="width: 100%;">
-                    </div>
-                        
-                
+                    
                     
                 </div>
         
@@ -301,13 +340,29 @@
                         </div>
                     </div>
 
+                    
                     <div class="form-field">
-                        <label  for="ville">Ville/Commune/Rue/Quartier/Immeuble ou villa</label>
-                        
-                    </div>
-
-                    <div class="form-field">
-                        <input type="text" class="form-control" id="ville" style="width: 100%;">
+                    
+                        <div>
+                            <label for="ville">Ville</label>
+                            <input type="text" class="form-control" id="ville">
+                        </div>
+                        <div>
+                            <label for="commune">Commune</label>
+                            <input type="text" class="form-control" id="commune">
+                        </div>
+                        <div>
+                            <label for="rue">Rue</label>
+                            <input type="text" class="form-control" id="rue">
+                        </div>
+                        <div>
+                            <label for="quartier">Quartier</label>
+                            <input type="text" class="form-control" id="quartier">
+                        </div>
+                        <div>
+                            <label for="immeuble_villa">Immeuble ou villa</label>
+                            <input type="text" class="form-control" id="immeuble_villa">
+                        </div>
                     </div>
 
                     <div class="form-field">
@@ -443,7 +498,7 @@
 });
 
 
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEven tListener("DOMContentLoaded", function() {
             // Vérifie si le choix précédent était "ei"
             var typeEntreprise = sessionStorage.getItem("typeEntreprise");
             if (typeEntreprise === "ei") {
