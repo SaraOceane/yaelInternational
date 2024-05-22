@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\EntrepriseController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -44,22 +44,20 @@ Route::get('/dashboard', function () {
 
 //Route::post('/pieces/upload','PieceController@upload');
 
-Route::get('/traitement_formes_juridiques', 'FormesJuridiquesController@traiterFormulaire')->name('traitement_formes_juridiques');
+Route::resource('Entreprise', EntrepriseController::class);
 Route::get('/formes_juridiques', function(){
     return View('formes_juridiques');
 });
 
+//Route::get('/traitement_formulaire', 'FormulaireController@traiterFormulaire')->name('traitement_formulaire');
+//Route::get('/formulaire', function(){
+//   return View('formulaire');
+//});
 
-Route::get('/formulaire', function(){
-    return View('formulaire');
-});
-
-Route::get('/traitement_formulaire2', 'Formulaire2Controller@traiterFormulaire')->name('traitement_formulaire2');
-Route::get('/formulaire2', function(){
-    return View('formulaire2');
-});
-
-Route::post('/traitement_formulaire', [EntrepriseController::class, 'store']);
+//Route::get('/traitement_formulaire2', 'Formulaire2Controller@traiterFormulaire')->name('traitement_formulaire2');
+//Route::get('/formulaire2', function(){
+//   return View('formulaire2');
+//});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

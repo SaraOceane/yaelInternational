@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\Entreprise;
-use App\Http\Requests\StoreEntrepriseRequest;
-use App\Http\Requests\UpdateEntrepriseRequest;
+
+use Illuminate\Http\Request;
+
 
 class EntrepriseController extends Controller
 {
@@ -29,43 +29,25 @@ class EntrepriseController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'nom_entreprise' => 'required' ,
-            'forme_juridique' => 'required',
-            'secteurs_activite' => 'required',
-            'sigle_usuel' => 'required',
-            'enseigne' => 'required',
-            'capital' => 'required',
-            'valeur_nominale' => 'required',
-            'date_debut_activite' => 'required',
-            'loyer_mensuel' => 'required',
-            'lot' => 'required',
-            'situation_geographique' => 'required',
-            'numero_titre_foncier' => 'required',
-            'contact_adresse_postale' => 'required',
-            'chiffre_affaire_previsionnel' => 'required',
-            'regime_imposition' => 'required',
-        ]);
+        //dd($request['denomination']);
 
-        $entreprise = new Entreprise();
-        $entreprise->nom_entreprise = $request->nom_entreprise;
-        $entreprise->forme_juridique = $request->forme_juridique;
-        $entreprise->secteurs_activite = $request->secteurs_activite;
-        $entreprise->sigle_usuel = $request->sigle_usuel;
-        $entreprise->enseigne = $request->enseigne;
-        $entreprise->capital = $request->capital;
-        $entreprise->valeur_nominale = $request->valeur_nominale;
-        $entreprise->date_debut_activite = $request->date_debut_activite;
-        $entreprise->loyer_mensuel = $request->loyer_mensuel;
-        $entreprise->lot = $request->lot;
-        $entreprise->situation_geographique = $request->situation_geographique;
-        $entreprise->numero_titre_foncier = $request->numero_titre_foncier;
-        $entreprise->contact_adresse_postale = $request->contact_adresse_postale;
-        $entreprise->chiffre_affaire_previsionnel = $request->chiffre_affaire_previsionnel;
-        $entreprise->regime_imposition = $request->regime_imposition;
-        $entreprise->save();
+        Entreprise::create(
+            ['nom_entreprise' => $request['denomination'],
+            'forme_juridique' => $request['forme_juridique' ],
+            'sigle_usuel' => $request['sigle'],
+            'date_debut_activite' => $request['date_debut'],
+            'capital' => $request['capital'],
+            'valeur_nominale' => $request['valeur_nominale'],
+            'enseigne' => $request['Enseigne'],
+            'secteurs_activite' => $request['activite']
 
-        return redirect('/mon_espace')->with('status', 'Le formulaire a bien été enregistré avec succes.');
+            ]
+
+
+        );
+        $request->session()->flush;
+        return redirect('/mon_espace');
+
     }
 
 

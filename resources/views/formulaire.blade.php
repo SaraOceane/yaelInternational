@@ -73,7 +73,7 @@
     </style>
 
 <body>
-    <div class="form-container container section">
+    <div class="form-container">
         <h2 class="form-title">PROCEDURE DE CREATION D'ENTREPRISE</h2>
         <h3 class="form-subtitle">INFORMATIONS REQUISES</h3>
 
@@ -85,7 +85,7 @@
 
         <h4> Sigle usuel et enseigne</h4>
 
-        <form action="" method="post">
+
         <div class="form-field">
             <div>
                 <label for="sigle_usuel">Sigle usuel</label>
@@ -161,7 +161,7 @@
         </div>
 
         <button type="submit" class="btn btn-primary" onclick="redirectToNextPage()">Suivant</button>
-    </form>
+
     </div>
 
     <script>
