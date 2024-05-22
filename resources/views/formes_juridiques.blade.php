@@ -1,164 +1,158 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comprendre les Entreprises Individuelles et les SARL</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <style>
-        body {
-            background-color: #f8f9fa;
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .section {
-            max-width: 800px;
-            padding: 30px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            margin: 20px;
-            text-align: center;
-            display: none;
-        }
-        .section.active {
-            display: block;
-        }
-        .section h1 {
-            font-size: 36px;
-            font-weight: bold;
-            margin-bottom: 30px;
-            color: #007bff;
-        }
-        .section h2 {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            color: #007bff;
-        }
-        .section p {
-            font-size: 18px;
-            line-height: 1.6;
-            margin-bottom: 20px;
-            color: #495057;
-        }
-        .section .icon {
-            font-size: 48px;
-            color: #007bff;
-            margin-bottom: 20px;
-        }
-        .section .feature {
-            margin-bottom: 20px;
-        }
-        .section .feature i {
-            margin-right: 10px;
-            color: #007bff;
-        }
-        .btn-next {
-            margin-top: 20px;
-            font-size: 18px;
-            padding: 10px 20px;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="section active">
-            <h1>Ce qu'il faut savoir</h1>
-            <p>Il y a deux types de formes juridiques: les EI(Entreprises Individuelles) et les SARL(Sociétés A Responsabilité Limitée).</p>
-            <button class="btn btn-primary btn-next">Suivant</button>
-        </div>
-        <div class="section">
-            <h2>Entreprise Individuelle (EI)</h2>
-            <p>Une Entreprise Individuelle est une entreprise exploitée par une seule personne physique. 
-            La personnalité d'une entreprise individuelle correspond à celle du propriétaire ; le patrimoine 
-            privé du propriétaire est confondu avec son patrimoine professionnel.</p>
-            <div class="feature">
-                <i class="fas fa-user"></i> Propriété individuelle
-            </div>
-            <div class="feature">
-                <i class="fas fa-money-bill-wave"></i> Responsabilité illimitée
-            </div>
-            <button class="btn btn-primary btn-next">Suivant</button>
-        </div>
-        <div class="section">
-            <h2>Société à Responsabilité Limitée (SARL)</h2>
-            <p>Une Société à Responsabilité Limitée (SARL) est une forme juridique d'entreprise dans laquelle 
-            la responsabilité des associés est limitée au montant de leurs apports initiaux. En d'autres termes,
-            les associés ne sont pas personnellement responsables des dettes de la société au-delà de leur 
-            investissement initial.</p>
-            <p>Dans une SARL, les biens de l'entreprise sont distincts des biens personnels des associés. 
-            Pour constituer une SARL, il est nécessaire de déclarer un capital social et de rédiger des statuts.
-             Une SARL peut être unipersonnelle, dans ce cas l'associé unique détient l'intégralité des parts sociales,
-              ou pluripersonnelle, avec plusieurs associés détenant des parts sociales proportionnelles à leurs apports
-               respectifs.</p>
-               <div class="feature">
-                <i class="fas fa-users"></i> Associés limités
-            </div>
-            <div class="feature">
-                <i class="fas fa-handshake"></i> Contrat de société
-            </div>
-            <button class="btn btn-primary btn-next ">Suivant</button>
+@include('include.header')
+<style>
+.form-section{
+    display: none;
+}
+
+.form-section.current{
+    display: inline;
+}
+.parsley-errors-list{
+    color:red;
+}
+
+</style>
+
+
+
+
+
+  <body>
+
+    <div class="container-fluid  ">
+      <div class="row justify-content-md-center">
+        <div class="col-md-9 ">
+            <div class="card px-5 py-3 mt-5 shadow">
+               <h1 class="text-primary text-center mt-3 mb-4">PROCEDURE DE CREATION D'ENTREPRISE</h1>
+
+                        <div class="nav nav-fill my-3">
+                          <label class="nav-link shadow-sm step0    border ml-2 ">Etape 1</label>
+                          <label class="nav-link shadow-sm step1   border ml-2 " >Etape 2</label>
+                          <label class="nav-link shadow-sm step2   border ml-2 " >Etape 3</label>
+                        </div>
+
+                <form action={{ route('Entreprise.store') }} method="post" class="employee-form">
+                 @csrf
+                <div class="form-section">
+                    <p>
+                        Le statut juridique d’une entreprise détermine son cadre légal et impacte son fonctionnement et son développement. Créer son entreprise nécessite de faire un choix avisé du statut juridique car il conditionne la structure, la gestion, la fiscalité et la responsabilité des dirigeants. Il existe un large choix de formes juridiques avec des spécificités propres à chacune. Il est donc nécessaire de tenir compte de certains éléments notamment le capital social, l’affectio societatis, l’activité envisagée, l’étendue de la responsabilité ainsi que les différents régimes sociaux et fiscaux afin de choisir la forme juridique adéquate.
+                    </p>
+                    <p>
+                        Une société à responsabilité limitée est une société commerciale où l'associé voit sa responsabilité limitée jusqu'à concurrence des apports. Une SARL présente des caractéristiques d'une société mixte, et les parts détenues dans le capital ne sont pas librement accessibles sans accord de tout ou partie des associés
+                    </p>
+                    <p>
+                        Une entreprise individuelle est une entreprise dirigée par une seule personne, et qui n'a pas de personnalité morale, bien qu'elle soit parfois inscrite au répertoire des métiers, au registre du commerce et des sociétés, ou exercée en profession libérale. Ce type d'entreprise peut également comporter des salariés
+                    </p>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="forme_juridique" id="flexRadioDefault1" value="1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          Entreprise Individuelle (EI)
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="forme_juridique" id="flexRadioDefault2" value="2" checked>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                          Société à responsabilité limité (SARL)
+                        </label>
+                      </div>
+
+                </div>
+                <div class="form-section">
+                    <label for="">Dénomination et forme juridique</label>
+                    <input type="text" class="form-control mb-3" name="denomination" required>
+                    <label for="">Sigle usuel</label>
+                    <input type="text" class="form-control mb-3" name="sigle" required>
+                    <label for="">Enseigne</label>
+                    <input type="text" class="form-control mb-3" name="Enseigne" required>
+                    <label for="">Combien d'associés avez vous ?</label>
+                    <input type="number" id="nb_associes" name="nb_associes" min="1" max="10" class="form-control mb-3"  required>
+                </div>
+                <div class="form-section">
+                    <label for="">Activités</label>
+                    <input type="text" class="form-control" id="activite" name="activite">
+                    <label for="">Capital</label>
+                    <input type="text" class="form-control" id="capital" name="capital">
+                    <label for="">Valeur Nominale</label>
+                    <input type="text" class="form-control" id="valeur_nominale" name="valeur_nominale">
+                    <label for="">Date de début d'activité</label>
+                    <input type="date" class="form-control" id="date_debut" name="date_debut">
+                </div>
+              <div class="form-navigation mt-3">
+                 <button type="button" class="previous btn btn-primary float-left">&lt; Previous</button>
+                 <button type="button" class="next btn btn-primary float-right">Next &gt;</button>
+                 <button type="submit" class="btn btn-success float-right">Submit</button>
+              </div>
+
+            </form>
         </div>
 
-        <div class="section">
-            <h2>Choix du type d'entreprise</h2>
-            <p>Quel type d'entreprise souhaitez-vous créer?</p>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="typeEntreprise" id="eiRadio" value="ei">
-                <label class="form-check-label" for="eiRadio">
-                  Entreprise Individuelle (EI)
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="typeEntreprise" id="sarlRadio" value="sarl">
-                <label class="form-check-label" for="sarlRadio">
-                  Société à Responsabilité Limitée (SARL)
-                </label>
-            </div>
-            <button class="btn btn-primary btn-next final">Valider</button>
         </div>
-
-        
+      </div>
     </div>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
-    <script>
-    var sections = document.querySelectorAll('.section');
-    var index = 0;
-    var btnNext = document.querySelectorAll('.btn-next');
-    var finalBtn = document.querySelector('.btn-next.final');
 
-    btnNext.forEach(button => {
-        button.addEventListener('click', function() {
-            // Vérifier s'il y a une option sélectionnée
-            var selectedOption = document.querySelector('input[name="typeEntreprise"]:checked');
-            if (selectedOption) {
-                // Stocker la valeur dans sessionStorage
-                sessionStorage.setItem("typeEntreprise", selectedOption.value);
-            }
 
-            // Masquer la section actuelle
-            sections[index].classList.remove('active');
-            // Passer à la section suivante
-            index++;
-            if (index >= sections.length) {
-                index = 0;
-            }
-            // Afficher la nouvelle section
-            sections[index].classList.add('active');
+
+
+<script>
+
+    $(function(){
+        var $sections=$('.form-section');
+
+
+        function navigateTo(index){
+
+            $sections.removeClass('current').eq(index).addClass('current');
+
+            $('.form-navigation .previous').toggle(index>0);
+            var atTheEnd = index >= $sections.length - 1;
+            $('.form-navigation .next').toggle(!atTheEnd);
+            $('.form-navigation [Type=submit]').toggle(atTheEnd);
+
+
+            const step= document.querySelector('.step'+index);
+            step.style.backgroundColor="#24a7b8";
+            step.style.color="white";
+
+
+
+        }
+
+        function curIndex(){
+
+            return $sections.index($sections.filter('.current'));
+        }
+
+        $('.form-navigation .previous').click(function(){
+            navigateTo(curIndex() - 1);
         });
+
+        $('.form-navigation .next').click(function(){
+            $('.employee-form').parsley().whenValidate({
+                group:'block-'+curIndex()
+            }).done(function(){
+                navigateTo(curIndex()+1);
+            });
+
+        });
+
+        $sections.each(function(index,section){
+            $(section).find(':input').attr('data-parsley-group','block-'+index);
+        });
+
+
+        navigateTo(0);
+
+
+
     });
 
-    finalBtn.addEventListener('click', function() {
-        window.location.href = 'formulaire';
-    });
+
 </script>
 
-</body>
+
+
+  </body>
 </html>
+
+

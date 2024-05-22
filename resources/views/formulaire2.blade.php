@@ -99,9 +99,6 @@
 </head>
 <body>
     <div class="form-container">
-
-
-
             <div class="form-field">
                 <div>
                     <label for="loyer">Loyer mensuel</label>
@@ -204,7 +201,7 @@
         }
     </script>
 
-    
+
 
     <form action="" method="post"></form>
 </body>

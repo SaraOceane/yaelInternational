@@ -41,7 +41,7 @@ class Entreprise extends Model
         'contact_adresse_postale',
         'chiffre_affaire_previsionnel',
         'regime_imposition',
-          
+
     ];
 }
 
