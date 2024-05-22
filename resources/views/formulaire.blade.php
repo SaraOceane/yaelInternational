@@ -85,7 +85,7 @@
 
         <h4> Sigle usuel et enseigne</h4>
 
-        
+
         <div class="form-field">
             <div>
                 <label for="sigle_usuel">Sigle usuel</label>
