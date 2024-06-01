@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Entreprise;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 
 class EntrepriseController extends Controller
@@ -32,20 +33,22 @@ class EntrepriseController extends Controller
         //dd($request['denomination']);
 
         Entreprise::create(
-            ['nom_entreprise' => $request['denomination'],
-            'forme_juridique' => $request['forme_juridique' ],
-            'sigle_usuel' => $request['sigle'],
-            'date_debut_activite' => $request['date_debut'],
-            'capital' => $request['capital'],
-            'valeur_nominale' => $request['valeur_nominale'],
-            'enseigne' => $request['Enseigne'],
-            'secteurs_activite' => $request['activite']
+            [
+                'users_id' => Auth::id(),
+                'nom_entreprise' => $request['denomination'],
+                'forme_juridique' => $request['forme_juridique' ],
+                'sigle_usuel' => $request['sigle'],
+                'date_debut_activite' => $request['date_debut'],
+                'capital' => $request['capital'],
+                'valeur_nominale' => $request['valeur_nominale'],
+                'enseigne' => $request['Enseigne'],
+                'secteurs_activite' => $request['activite'],
 
             ]
 
 
         );
-        $request->session()->flush;
+        $request->session()->flush();
         return redirect('/mon_espace');
 
     }

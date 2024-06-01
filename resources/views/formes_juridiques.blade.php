@@ -59,8 +59,10 @@
 
                 </div>
                 <div class="form-section">
-                    <label for="">Dénomination et forme juridique</label>
+                    <label for="">Dénomination </label>
                     <input type="text" class="form-control mb-3" name="denomination" required>
+                    <label for="">Forme juridique</label>
+                    <input type="text" class="form-control mb-3" name="forme_juridique" required>
                     <label for="">Sigle usuel</label>
                     <input type="text" class="form-control mb-3" name="sigle" required>
                     <label for="">Enseigne</label>

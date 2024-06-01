@@ -11,13 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('piece_jointes', function (Blueprint $table) {
-            $table->id();
-            $table->string('nom');
-            $table->string('emplacement');
-            $table->foreignId('associes_id')->constrained()->onDelete('cascade');
-
-            $table->timestamps();
+        Schema::table('users', function (Blueprint $table) {
+            
+            $table->string('number')->nullable();
+            //
         });
     }
 
@@ -26,6 +23,9 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('piece_jointes');
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropColumn('number');
+            //
+        });
     }
 };

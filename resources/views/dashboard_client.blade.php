@@ -118,25 +118,24 @@
                 <!-- Card Content - Collapse -->
                 <div class="collapse show" id="collapseCardExample">
                     <div class="card-body">
-
+                        
                             <div class="d-flex text-body-secondary pt-3">
                               <p class="pb-3 mb-0 lh-sm border-bottom ">
-                                <strong class="d-block text-gray-dark ">Nom</strong>
-                                Some representative placeholder content, with some information about this user. Imagine this being some sort of status update, perhaps?
+                                <strong class="d-block text-gray-dark ">Nom et Prénoms</strong>
+                                {{ $user->name }}
+                                    
                               </p>
                             </div>
-                            <div class="d-flex text-body-secondary pt-3">
-                              <p class="pb-3 mb-0 lh-sm border-bottom">
-                                <strong class="d-block text-gray-dark">Prénom</strong>
-                                Some more representative placeholder content, related to this other user. Another status update, perhaps.
-                              </p>
-                            </div>
+                            
                             <div class="d-flex text-body-secondary pt-3">
                               <p class="pb-3 mb-0 lh-sm border-bottom ">
-                                <strong class="d-block text-gray-dark">Numéro</strong>
-                                0021674320
+                                <strong class="d-block text-gray-dark">Numéro de téléphone</strong>
+                                
                               </p>
                             </div>
+                        
+                            
+                           
 
 
                         <!-- Boutton modifier -->
@@ -165,7 +164,7 @@
                         <div class="d-flex text-body-secondary pt-3">
                             <p class="pb-3 mb-0 lh-sm border-bottom ">
                               <strong class="d-block text-gray-dark ">Denomination</strong>
-                              Some representative placeholder content, with some information about this user. Imagine this being some sort of status update, perhaps?
+                              
                             </p>
                         </div>
                         <div class="d-flex text-body-secondary pt-3">

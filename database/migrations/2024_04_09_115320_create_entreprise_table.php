@@ -28,6 +28,7 @@ return new class extends Migration
             $table->string('contact_adresse_postale')->nullable();;
             $table->string('chiffre_affaire_previsionnel')->nullable();;
             $table->string('regime_imposition')->nullable();;
+            $table->foreignId('users_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

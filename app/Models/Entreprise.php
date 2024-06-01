@@ -5,6 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+
+
 class Entreprise extends Model
 {
     use HasFactory;
@@ -26,6 +28,7 @@ class Entreprise extends Model
     }
 
     protected $fillable = [
+        'users_id',
         'nom_entreprise',
         'forme_juridique',
         'secteurs_activite',
