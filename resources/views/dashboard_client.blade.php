@@ -122,7 +122,7 @@
                             <div class="d-flex text-body-secondary pt-3">
                               <p class="pb-3 mb-0 lh-sm border-bottom ">
                                 <strong class="d-block text-gray-dark ">Nom et Prénoms</strong>
-                                {{ $user->name }}
+                                
                                     
                               </p>
                             </div>

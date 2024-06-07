@@ -13,6 +13,7 @@ class DashboardController extends Controller
      */
     public function index()
     {
+        
         // Vérifiez si l'utilisateur est authentifié
         if (!Auth::check()) {
             return redirect()->route('login')->with('error', 'Vous devez être connecté pour accéder à cette page.');
@@ -21,16 +22,23 @@ class DashboardController extends Controller
         // Déclaration de la variable $user
         $user = Auth::user();
 
-        // Débogage de l'utilisateur
+    
+        // Ajoutez ceci pour vérifier si l'utilisateur est authentifié
         dd($user);
+        
+
+        
+
+        // Débogage de l'utilisateur
+        //dd($user);
 
         // Récupération de l'entreprise associée à l'utilisateur
-        $entreprise = Entreprise::where('users_id', $user->id)->first();
+        //$entreprise = Entreprise::where('users_id', $user->id)->first();
 
         // Retourne la vue avec les données de l'utilisateur et de l'entreprise
         return view('dashboard_client', [
             'user' => $user,
-            'entreprise' => $entreprise
+            //'entreprise' => $entreprise
         ]);
     }
 }
